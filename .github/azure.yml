@@ -1,0 +1,16 @@
+on: [push]
+name: AzureLoginDeploy
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@main
+    - uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+    - uses: azure/arm-deploy@v1
+      with:
+        resourceGroupName: shopify-webhookify
+        template: ./azuredeploy.json
+        parameters: storageAccountType=Standard_LRS

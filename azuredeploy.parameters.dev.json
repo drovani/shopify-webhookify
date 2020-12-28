@@ -1,0 +1,30 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "resourceGroupName": {
+      "value": "shopify-webhookify-dev"
+    },
+    "resourceGroupLocation": {
+      "value": "uscentralnorth"
+    },
+    "storagePrefix": {
+      "value": "swify-dev"
+    },
+    "storageSKU": {
+      "value": "Standard_LRS"
+    },
+    "appServicePlanName": {
+      "value": "shopify-webhookify-dev"
+    },
+    "webAppName": {
+      "value": "shopify-webhookify-dev"
+    },
+    "resourceTags": {
+      "value": {
+        "Environment": "Dev",
+        "Project": "Shopify Webhookify Dev"
+      }
+    }
+  }
+}
